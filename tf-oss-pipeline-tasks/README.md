@@ -1,6 +1,8 @@
 # TF OSS Azure DevOps Release Pipeline Tasks
+Azure DevOps Release pipelines will take an artifact from a previous build pipeline and act upon it. In this case, you would have terraform code in a version control repository. When a change is commited to the repository, the build pipeline for that repository runs and generating an artifact containing the code. The release pipeline picks up the new artifact, and deploys it using Terraform Open Source.
 
 ## Requirements
+- A build pipeline with a published artifact containing your terraform code.
 - Terraform plugin installed from the marketplace.
 - An existing Resource Group, Storage Account, and Container.
 - An Azure DevOps Service Connection to the subscription containing the resource group.
